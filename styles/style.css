@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    background-image: linear-gradient(to bottom, #0A5CFF, #84D9FD);
+}
+
+header{
+    width: 70vw;
+    height: 5vh;
+    position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+    margin: 0 15vw;
+    padding: 12px 15px;
+	z-index: 1;
+    color: rgba(40, 40, 43);
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 20px;
+    background-color: #fffff4;
+    border-radius: 0px 0px 15px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.signin-wrapper {
+   
+    width: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #faf9f6;
+    background: transparent;
+    border: 2px solid #fffff4;
+    border-radius: 40px;
+    box-shadow: 0 0 50px 15px hsl(60, 100%, 98%);
+}
+
+.signin-wrapper h1 {
+    font-size: 60px;
+    text-align: center;
+    padding: 20px 0 60px 0;
+    color: #fffff4;
+}
+
+.signin-wrapper h2 {
+    font-size: 40px;
+    text-align: center;
+    padding: 20px 0 60px 0;
+    color: #fffff4;
+}
+
+.signin-wrapper .input-box {
+    position: relative;
+    width: 93%;
+    height: 50px;
+    margin: 0px 100px 30px 15px;
+}
+
+.signin-wrapper .input-box input{
+    width: 100%;
+    height: 100%;
+    background:transparent;
+    outline: none;
+    border: 2px solid #fffff4;
+    border-radius: 40px;
+    color: rgba(40, 40, 43);
+    font-size: 20px;
+    padding: 0 45.8px 0 15px;
+}
+
+.input-box input::placeholder{
+    color: rgba(40, 40, 43);
+    font-size: 20px;
+}
+
+.input-box i{
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 20px;
+}
+
+.signin-wrapper .submit-btn{
+    width: 93%;
+    height: 40px;
+    margin: 30px 15px;
+    border-radius: 40px;
+    border: none;
+    background-color: #fffff4;
+    color: rgba(40, 40, 43);
+    text-shadow: rgba(40, 40, 43) 0px 2px 100px 0px ;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 500ms ease;
+}
+
+.submit-btn:hover {
+    scale: 1.05;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+}
+
+.error {
+    color: red;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+
+.clouds1 img {
+    width: 550px;
+    position: absolute;
+    top: 50px;
+    right: 50%;
+     animation: cloud1 100s linear infinite; 
+     z-index: -1;
+}
+
+.clouds2 img{
+    width: 500px;
+    position: absolute;
+    top: 60px;
+    right: 50%;
+     animation: cloud2 78s linear infinite; 
+     z-index: -1;
+}
+
+.clouds3 img{
+    width: 450px;
+    position: absolute;
+    top: 70px;
+    right: 50%;
+    animation: cloud3 92s linear infinite;
+    z-index: -1;
+}
+
+/* Cloud animations */
+@keyframes cloud1 {
+        0%{
+            transform: translateX(-120vw);
+        }
+
+        100%{
+            transform: translateX(100vw);
+        }
+}
+
+@keyframes cloud2 {
+   0%{
+        transform: translateX(-50vw);
+   }
+
+   100%{
+        transform: translateX(70vw);
+   }
+}
+
+@keyframes cloud3 {
+    0%{
+        transform: translateX(-200vw);
+
+    }
+
+    100%{
+        transform: translateX(80vw);
+    }
+   
+}
+
+
+/* Media queries used to adapt CSS design to screen */
+@media screen and (max-width: 993px) {
+    .signin-wrapper{
+        width: 45.5%;
+    }
+
+    .signin-wrapper h1{
+        font-size: 360%;
+    }
+}
+
+@media screen and (max-width: 768px){
+
+    .signin-wrapper{
+        width: 45.5%;
+        height: auto;
+    }
+
+    .signin-wrapper h1{
+        font-size: 200%;
+    }
+
+    .signin-wrapper h2{
+        font-size: 200%;
+    }
+
+    .signin-wrapper .input-box{
+        margin: 0 5% 10% 5%;
+        font-size: 50%;
+    }
+
+    .signin-wrapper .submit-btn{
+        margin: 0 5% 10% 5%;
+        font-size: 90%;
+    }
+
+
+}
+
+

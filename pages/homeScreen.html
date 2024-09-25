@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PTO Manager</title>
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="../styles/homeScreen.css">
+    <!-- Link Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <div id="header-links-container">
+            <p>PTO Manager</p>
+            <p>Home Screen</p>
+            <div class="header-right-side">
+                <span id="log-out">Log out</span>
+                    
+                <img src="../images/user_picture.png" class="user-picture">
+            </div>
+            
+        </div>
+    </header>
+    
+    <main>
+            <!-- Pop Log out -->
+            <div class="pop-container">
+                <i class='bx bxs-door-open bx-rotate-180' ></i>
+                    <p class="poptext">Oh no! It looks like you are trying to leave page. <br> Are you sure?</p>
+                <div class="pop-sbtn">
+                    <input type="submit" value="Yes" class="pop-yes">
+                    <input type="submit" value="No" class="pop-no">
+                </div>
+            </div>
+            
+        
+        <div class="current-user-container">
+            <!-- Contains dropdown menu, selected employee information -->
+            <div class="left-side">
+                <div class="select-user">
+                        <div class="select-btn">
+                            <span class="sbtn-text">Select Employee</span>
+                        <i class='bx bx-chevron-down' ></i>
+                        </div>
+    
+                        <ul class="employee-options">
+                            <!-- Each employee option will be dynamically added through "li" and "span" elements (function addEmployeesToDropdownMenu in homeScreen.js) -->
+                        </ul>
+                </div>
+                    
+                 <div class="user-data-container">
+                     <h2>Selected employee: </h2>
+                    <i>
+                     <div class="employee-info">
+                        <!-- Selected employee information will be dynamically added (function listItemClicked in homeScreen.js) -->
+                     </div>
+                    </i> 
+                     
+                 </div>
+            </div>
+            
+
+            <!-- Contains calendars and add PTO button -->
+            <div class="PTO-add-container">
+               
+                    <div class="calendar">
+                        <div class="calendar-header">
+                            <button class="prev-btn">
+                                <i class='bx bx-chevron-left' ></i>
+                            </button>
+                            <div class="month-year"></div>
+                            <button class="next-btn">
+                                <i class='bx bx-chevron-right' ></i>
+                            </button>
+                        </div>
+                        <div class="days">
+                            <div class="day">Mon</div>
+                            <div class="day">Tue</div>
+                            <div class="day">Wed</div>
+                            <div class="day">Thu</div>
+                            <div class="day">Fri</div>
+                            <div class="day">Sat</div>
+                            <div class="day">Sun</div>
+                        </div>
+                        <ul class="dates">
+                            <!-- Dates will be dynamically added (function CalendarUpdate in calendar.js) -->
+                        </ul>
+                    </div>
+    
+                  
+                <div class="calendar2">
+                    <div class="calendar-header2">
+                        <button class="prev-btn2">
+                            <i class='bx bx-chevron-left' ></i>
+                        </button>
+                        <div class="month-year2"></div>
+                        <button class="next-btn2">
+                            <i class='bx bx-chevron-right' ></i>
+                        </button>
+                    </div>
+                    <div class="days2">
+                        <div class="day2">Mon</div>
+                        <div class="day2">Tue</div>
+                        <div class="day2">Wed</div>
+                        <div class="day2">Thu</div>
+                        <div class="day2">Fri</div>
+                        <div class="day2">Sat</div>
+                        <div class="day2">Sun</div>
+                    </div>
+                    <div class="dates2">
+                        <!-- Dates will be dynamically added (function CalendarUpdate2 in calendar.js) -->
+                    </div>
+                </div>
+
+                <button class="PTO-btn">Add PTO</button>
+            </div>
+        </div>
+
+        <!-- Contains each employee's PTO container -->
+        <div class="PTO">
+            <!-- Containers will be added dynamically (fuction createEmployeeContainer in homeScreen.js) -->
+            <!-- Each employeeContainer will have employeeInfoContainer (display employee's info) and PTOsContainer -->
+            <!-- Each employeeInfoContainer has employee's name, username, email and id  -->
+            <!-- Each PTOsContainer consists of past, current, future PTO container -->
+            <!-- Past PTO container has paragraph child with content "Past PTO: " -->
+            <!-- Current PTO container has paragraph child with content "Current PTO: " -->
+            <!-- Future PTO container has paragraph child with content "Future PTO: " -->
+            <!-- When new PTO is created it will be appended as child to one of past, current or future PTO container based on start and end date of PTO -->
+        </div>
+        
+        <script src = "../scripts/homeScreen.js" type="module"></script>
+        <script src="../scripts/calendar.js" type="module"></script>
+    </main>
+
+    
+</body>
+</html>
